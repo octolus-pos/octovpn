@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    font-family: 'Montserrat', Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+
+    color: var(--theme-foreground);
+    background-color: var(--theme-background);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+
+    --theme-primary: rgb(194, 130, 255);
+    --theme-secondary: rgb(151, 76, 221);
+    --theme-tertiary: rgb(95, 31, 155);
+
+    --theme-border-active: rgb(169, 92, 224);
+    --theme-border-inactive: rgb(195, 152, 226);
+
+    --theme-container: rgb(210, 174, 236);
+
+    --theme-surface: rgb(234, 211, 255);
+    --theme-foreground: rgb(10, 10, 10);
+    --theme-background: #f6f6f6;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 5rem auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0px;
+
+    color: var(--theme-foreground);
+    background-color: var(--theme-background);
+    overflow: hidden;
+}
+
+h3,
+h4 {
+    cursor: default;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: left;
+    font-size: xx-large;
+
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+h4 {
+    font-weight: normal;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.animated {
+    transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+}
+
+input,
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #0f0f0f;
+    background-color: var(--theme-background);
+    transition: border-color 0.25s;
+}
+
+@media (prefers-color-scheme: dark) {
+    button {
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+}
+
+button:hover {
+    border: 1px solid var(--theme-tertiary);
+    background-color: var(--theme-surface);
+}
+
+button:active {
+    border: 1px solid var(--theme-secondary);
+    background-color: var(--theme-surface);
+}
+
+input,
+button {
+    color: var(--theme-foreground);
+    outline: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+main {
+    margin: 1.5rem 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-primary: rgb(139, 88, 187);
+        --theme-secondary: rgb(106, 38, 170);
+        --theme-tertiary: rgb(57, 17, 94);
+
+        --theme-border-active: rgb(56, 25, 78);
+        --theme-border-inactive: rgb(33, 18, 44);
+
+        --theme-container: rgb(37, 20, 49);
+
+        --theme-surface-active: rgb(23, 15, 27);
+        --theme-surface: rgb(17, 12, 20);
+        --theme-foreground: rgb(245, 245, 245);
+        --theme-background-color: rgb(15, 11, 17);
+        --theme-background: rgb(12, 9, 14);
+
+        /* --theme-background-color: #111111;
+    --theme-background: #111111; */
+    }
+}
